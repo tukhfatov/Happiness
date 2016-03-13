@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CBFE61651C8E036800EC5070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE61641C8E036800EC5070 /* AppDelegate.swift */; };
-		CBFE61671C8E036800EC5070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE61661C8E036800EC5070 /* ViewController.swift */; };
 		CBFE616A1C8E036800EC5070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFE61681C8E036800EC5070 /* Main.storyboard */; };
 		CBFE616C1C8E036800EC5070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBFE616B1C8E036800EC5070 /* Assets.xcassets */; };
 		CBFE616F1C8E036800EC5070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBFE616D1C8E036800EC5070 /* LaunchScreen.storyboard */; };
+		CBFE61781C8E03FE00EC5070 /* HappinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE61771C8E03FE00EC5070 /* HappinessViewController.swift */; };
+		CBFE617A1C8E050400EC5070 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFE61791C8E050400EC5070 /* FaceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CBFE61611C8E036800EC5070 /* Happiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Happiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFE61641C8E036800EC5070 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBFE61661C8E036800EC5070 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CBFE61691C8E036800EC5070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBFE616B1C8E036800EC5070 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBFE616E1C8E036800EC5070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBFE61701C8E036800EC5070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBFE61771C8E03FE00EC5070 /* HappinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HappinessViewController.swift; sourceTree = "<group>"; };
+		CBFE61791C8E050400EC5070 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		CBFE61631C8E036800EC5070 /* Happiness */ = {
 			isa = PBXGroup;
 			children = (
-				CBFE61641C8E036800EC5070 /* AppDelegate.swift */,
-				CBFE61661C8E036800EC5070 /* ViewController.swift */,
+				CBFE61761C8E036E00EC5070 /* Supporting Files */,
 				CBFE61681C8E036800EC5070 /* Main.storyboard */,
+				CBFE61771C8E03FE00EC5070 /* HappinessViewController.swift */,
+				CBFE61791C8E050400EC5070 /* FaceView.swift */,
+			);
+			path = Happiness;
+			sourceTree = "<group>";
+		};
+		CBFE61761C8E036E00EC5070 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				CBFE616B1C8E036800EC5070 /* Assets.xcassets */,
 				CBFE616D1C8E036800EC5070 /* LaunchScreen.storyboard */,
 				CBFE61701C8E036800EC5070 /* Info.plist */,
+				CBFE61641C8E036800EC5070 /* AppDelegate.swift */,
 			);
-			path = Happiness;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBFE61671C8E036800EC5070 /* ViewController.swift in Sources */,
+				CBFE61781C8E03FE00EC5070 /* HappinessViewController.swift in Sources */,
 				CBFE61651C8E036800EC5070 /* AppDelegate.swift in Sources */,
+				CBFE617A1C8E050400EC5070 /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
