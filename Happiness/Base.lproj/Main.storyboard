@@ -23,14 +23,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="oBg-tS-vZt">
-                                <rect key="frame" x="40" y="518" width="241" height="31"/>
-                                <connections>
-                                    <action selector="sliderValueChanged:" destination="X5P-yH-dmo" eventType="valueChanged" id="zB7-aP-dKK"/>
-                                </connections>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="urU-n4-9qi" appends="YES" id="XKi-9a-wlx"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="myFaceView" destination="wP4-E7-QOl" id="LGy-B4-MdL"/>
@@ -38,6 +36,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73b-AW-4GN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="urU-n4-9qi">
+                    <connections>
+                        <action selector="changeHappiness:" destination="X5P-yH-dmo" id="l5j-tM-N3U"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="208" y="164"/>
         </scene>

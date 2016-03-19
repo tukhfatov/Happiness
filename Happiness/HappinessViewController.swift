@@ -13,15 +13,32 @@ class HappinessViewController: UIViewController, FaceViewDataSource{
     @IBOutlet weak var myFaceView: FaceView! {
         didSet {
             myFaceView.dataSource = self
+            myFaceView.addGestureRecognizer(UIPinchGestureRecognizer(target: myFaceView, action: "scale:"))
         }
     }
     
     @IBOutlet weak var myLabel: UILabel!
     
+    private struct Constants {
+        static let HappinessGestureScale:CGFloat = 4
+    }
+    
+    @IBAction func changeHappiness(gesture: UIPanGestureRecognizer) {
+        switch gesture.state{
+        case .Ended: fallthrough
+        case .Changed:
+            let translation = gesture.translationInView(myFaceView)
+            let happinessChange = -Int(translation.y/Constants.HappinessGestureScale)
+            if happinessChange != 0 {
+                happiness += happinessChange
+                gesture.setTranslation(CGPointZero, inView: myFaceView)
+            }
+        default: break
+        }
+    }
     var happiness: Int = 50 {
         didSet {
             happiness = min(max(happiness, 0) , 100)
-            print("Happiness \(happiness)")
             updateUI()
         }
     }
@@ -43,9 +60,6 @@ class HappinessViewController: UIViewController, FaceViewDataSource{
             }
         }
         myFaceView.setNeedsDisplay()
-    }
-    @IBAction func sliderValueChanged(sender: UISlider) {
-        happiness = Int(sender.value)
     }
     
 }
